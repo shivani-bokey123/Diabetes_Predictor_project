@@ -9,7 +9,7 @@ import pickle
 import streamlit as st
 
 # Load models and scaler
-simple_model = pickle.load(open(r"C:/Users/ASUS/Desktop/DiseaseProject/catboost_model.pkl", "rb"))
+simple_model = pickle.load(open("catboost_model.pkl", "rb"))
 advanced_model = pickle.load(open(r"C:/Users/ASUS/Desktop/DiseaseProject/trained_model.pkl", "rb"))
 scaler = pickle.load(open(r"C:/Users/ASUS/Desktop/DiseaseProject/scaler.pkl", "rb"))
 
