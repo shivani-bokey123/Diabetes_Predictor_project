@@ -18,10 +18,11 @@ try:
     simple_model = pickle.load(open(os.path.join(base_path, "catboost_model.pkl"), "rb"))
     advanced_model = pickle.load(open(os.path.join(base_path, "trained_model.pkl"), "rb"))
     scaler = pickle.load(open(os.path.join(base_path, "scaler.pkl"), "rb"))
+
 except FileNotFoundError as e:
-    import streamlit as st
     st.error(f"Model file not found: {e}")
     st.write("Please make sure all .pkl files are uploaded to your GitHub repository in the same folder as webpage.py.")
+
 
 # Prediction functions
 def simple_prediction(input_data):
