@@ -7,11 +7,15 @@ Created on Fri Jun 12 09:56:00 2026
 import numpy as np
 import pickle
 import streamlit as st
+import os
 
 # Load models and scaler
-simple_model = pickle.load(open("catboost_model.pkl", "rb"))
-advanced_model = pickle.load(open(r"C:/Users/ASUS/Desktop/DiseaseProject/trained_model.pkl", "rb"))
-scaler = pickle.load(open(r"C:/Users/ASUS/Desktop/DiseaseProject/scaler.pkl", "rb"))
+# safer relative paths
+base_path = os.path.dirname(__file__)
+
+simple_model = pickle.load(open(os.path.join(base_path, "catboost_model.pkl"), "rb"))
+advanced_model = pickle.load(open(os.path.join(base_path, "trained_model.pkl"), "rb"))
+scaler = pickle.load(open(os.path.join(base_path, "scaler.pkl"), "rb"))
 
 # Prediction functions
 def simple_prediction(input_data):
