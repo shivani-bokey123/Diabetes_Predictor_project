@@ -1,5 +1,10 @@
 streamlit
 numpy
+pandas
 scikit-learn
 pickle-mixin
-pandas
+catboost
+xgboost
+lightgbm
+matplotlib
+seaborn
