@@ -1,74 +1,62 @@
 Diabetes Disease Predictor (Two‑Level Model + Chatbot)
-🔹 Problem Statement
-➡️ Diabetes is a chronic disease affecting millions worldwide.
+Problem Statement
+Diabetes is a chronic disease affecting millions worldwide.
 
-➡️ Most ML predictors rely on clinical blood test values (Glucose, Insulin, BMI).
+Most ML predictors rely on clinical blood test values (Glucose, Insulin, BMI).
 
-➡️ Limitation: Normal users without lab tests cannot use such predictors effectively.
+Normal users without lab tests cannot use such predictors effectively.
 
-➡️ Solution: Developed a two‑level predictor (Advanced + Basic) with chatbot integration.
+To solve this, I developed a two‑level predictor (Advanced + Basic) with chatbot integration.
 
-🔹 Advanced Diabetes Predictor
-➡️ Uses clinical features for accurate detection.
+Advanced Diabetes Predictor
+Uses clinical features for accurate detection.
 
-➡️ Features: Age, Pregnancies, Blood Pressure, Glucose, Insulin, Skin Thickness, Diabetes Pedigree Function, BMI.
+Features: Age, Pregnancies, Blood Pressure, Glucose, Insulin, Skin Thickness, Diabetes Pedigree Function, BMI.
 
-➡️ Limitation: Reliable only with proper lab test values.
+Limitation: Reliable only with proper lab test values.
 
-🔹 Basic Diabetes Predictor
-➡️ Uses symptom‑based inputs for accessibility without lab tests.
+Basic Diabetes Predictor
+Uses symptom‑based inputs for accessibility without lab tests.
 
-➡️ Features: Age, Gender, Polyuria, Polydipsia, Weight Loss, Weakness, Polyphagia, Genital Thrush, Visual Blurring, Itching, Irritability, Delayed Healing, Partial Paresis, Muscle Stiffness, Alopecia.
+Features: Age, Gender, Polyuria, Polydipsia, Weight Loss, Weakness, Polyphagia, Genital Thrush, Visual Blurring, Itching, Irritability, Delayed Healing, Partial Paresis, Muscle Stiffness, Alopecia.
 
-➡️ Solves accessibility gap for middle‑class users.
+Solves accessibility gap for middle‑class users.
 
-🔹 Integrated Chatbot
-➡️ Built with Streamlit for interactivity.
+Integrated Chatbot
+Built with Streamlit, providing:
 
-➡️ Provides:
+Diet recommendations
 
-→ Diet recommendations
+Sleep schedule guidance
 
-→ Sleep schedule guidance
+Lifestyle tips
 
-→ Lifestyle tips
+General health FAQs
 
-→ General health FAQs
+Data Processing Workflow
+Data Cleaning: Handled missing values and normalized features.
 
-🔹 Data Processing Workflow
-➡️ Data Cleaning → handled missing values, normalized features.
+Data Splitting: Divided dataset into training and testing sets.
 
-➡️ Data Splitting → train/test split for evaluation.
+Model Training: Trained multiple ML models.
 
-➡️ Model Training → trained multiple ML models.
+Model Comparison: Evaluated accuracy and selected the best performing model.
 
-➡️ Model Comparison → checked accuracy and selected best performing model.
+Models Compared
+During experimentation, I implemented and compared multiple machine learning algorithms including Logistic Regression, Support Vector Machine (SVM), Random Forest, Decision Tree, XGBoost, and Gradient Boosting. Each model was trained and tested on the dataset, and their accuracy was evaluated. Based on the comparison, the models with higher accuracy were selected for deployment in the final application.
 
-🔹 Models Compared
-➡️ Logistic Regression
+Tech Stack
+Languages/Frameworks: Python, Streamlit
 
-➡️ Support Vector Machine (SVM)
+Libraries: Scikit‑Learn, XGBoost, LightGBM, CatBoost, Pandas, NumPy, Matplotlib, Seaborn
 
-➡️ Random Forest
+Model Storage: Pickle‑Mixin
 
-➡️ Decision Tree
+Deployment: Streamlit with custom UI
 
-➡️ XGBoost
+Impact
+Accessible diabetes prediction for users without lab tests.
 
-➡️ Gradient Boosting
+Accurate detection for medical professionals with clinical data.
 
-🔹 Tech Stack
-➡️ Languages/Frameworks: Python, Streamlit
-
-➡️ Libraries: Scikit‑Learn, XGBoost, LightGBM, CatBoost, Pandas, NumPy, Matplotlib, Seaborn
-
-➡️ Model Storage: Pickle‑Mixin
-
-➡️ Deployment: Streamlit with custom UI
-
-🔹 Impact
-➡️ Accessible diabetes prediction for users without lab tests.
-
-➡️ Accurate detection for medical professionals with clinical data.
-
-➡️ Interactive chatbot improves user experience.
+Interactive chatbot improves user experience.
