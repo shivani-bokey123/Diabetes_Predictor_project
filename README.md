@@ -1,75 +1,46 @@
-**Diabetes Disease Predictor**
-*Problem Statement:*
-Diabetes is a chronic disease affecting millions worldwide. Early detection and awareness are crucial for prevention and management. Most existing ML‑based predictors are accurate only when clinical blood test values are available (e.g., glucose, insulin, BMI). This creates a limitation: normal users without medical test results cannot use such predictors effectively.
+Diabetes Disease Predictor (Two‑Level Model + Chatbot)
 
-To address this real‑world problem, I developed a two‑level Diabetes Disease Predictor:
+Problem Statement
+Diabetes is a chronic disease affecting millions worldwide. Most ML predictors rely on clinical blood test values (glucose, insulin, BMI), limiting accessibility for normal users.
+This project introduces a two‑level predictor:
 
-**Advanced Diabetes Predictor**
-This model uses clinical features and provides accurate predictions when proper medical test values are available.
+Advanced Predictor → Clinical features for accurate detection.
 
-Features used:
+Basic Predictor → Symptom‑based detection for accessibility without lab tests.
 
-Age
+Models Compared
+Implemented and evaluated multiple ML algorithms:
 
-Pregnancies
+Logistic Regression
 
-Blood Pressure
+Support Vector Machine (SVM)
 
-Glucose Level
+Random Forest
 
-Insulin Level
+Decision Tree
 
-Skin Thickness
+XGBoost
 
-Diabetes Pedigree Function
+Gradient Boosting
 
-BMI
+Accuracy of each model was compared, and the best performing model was selected for deployment.
 
-Outcome (Positive = 1, Negative = 0)
+Data Processing
+Data Cleaning → handled missing values, normalized features.
 
-**Limitation:** Prediction is reliable only when all values are correct and obtained through blood tests. Hence, it is suitable for medical professionals or users with lab reports.
+Data Splitting → train/test split for evaluation.
 
-**Basic Diabetes Predictor**
-To make diabetes risk detection accessible for everyone, especially middle‑class users, I built a symptom‑based predictor that does not require medical knowledge or lab tests.
+Model Training → trained multiple models and selected the one with highest accuracy.
 
-**Features used:**
+Model Storage → saved using Pickle‑Mixin for deployment.
 
-Age
+Features Used
+Advanced Model: Age, Pregnancies, Blood Pressure, Glucose, Insulin, Skin Thickness, Diabetes Pedigree Function, BMI.
 
-Gender
+Basic Model: Age, Gender, Polyuria, Polydipsia, Weight Loss, Weakness, Polyphagia, Genital Thrush, Visual Blurring, Itching, Irritability, Delayed Healing, Partial Paresis, Muscle Stiffness, Alopecia.
 
-Polyuria
-
-Polydipsia
-
-Sudden Weight Loss
-
-Weakness
-
-Polyphagia
-
-Genital Thrush
-
-Visual Blurring
-
-Itching
-
-Irritability
-
-Delayed Healing
-
-Partial Paresis
-
-Muscle Stiffness
-
-Alopecia
-
-Class (Outcome: Positive = 1, Negative = 0)
-
-This model solves the accessibility gap by allowing normal users to check their diabetes risk based on common symptoms.
-
-**Integrated Chatbot:**
-I also integrated a Streamlit‑based chatbot that helps users with health‑related queries such as:
+Integrated Chatbot
+Streamlit‑based chatbot provides:
 
 Diet recommendations
 
@@ -79,19 +50,16 @@ Lifestyle tips
 
 General health FAQs
 
-The chatbot makes the application interactive and user‑friendly.
+Tech Stack
+Languages/Frameworks: Python, Streamlit
 
-**Tech Stack:**
-Web App: Streamlit
+Libraries: Scikit‑Learn, XGBoost, LightGBM, CatBoost, Pandas, NumPy, Matplotlib, Seaborn
 
-ML Models: Scikit‑Learn, XGBoost, LightGBM, CatBoost
+Deployment: Streamlit with custom UI
 
-Data Handling: Pandas, NumPy
+Impact
+Makes diabetes prediction accessible for users without lab tests.
 
-Visualization: Matplotlib, Seaborn
+Provides interactive chatbot for lifestyle guidance.
 
-Model Storage: Pickle‑Mixin
-
-**Deployment:**
-The application is deployed on Streamlit with a custom UI built using Streamlit components, making it simple and accessible for end‑users.
-
+Demonstrates comparison of multiple ML models with accuracy evaluation.
