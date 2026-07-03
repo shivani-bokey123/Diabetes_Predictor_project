@@ -1,65 +1,74 @@
 Diabetes Disease Predictor (Two‑Level Model + Chatbot)
+🔹 Problem Statement
+➡️ Diabetes is a chronic disease affecting millions worldwide.
 
-Problem Statement
-Diabetes is a chronic disease affecting millions worldwide. Most ML predictors rely on clinical blood test values (glucose, insulin, BMI), limiting accessibility for normal users.
-This project introduces a two‑level predictor:
+➡️ Most ML predictors rely on clinical blood test values (Glucose, Insulin, BMI).
 
-Advanced Predictor → Clinical features for accurate detection.
+➡️ Limitation: Normal users without lab tests cannot use such predictors effectively.
 
-Basic Predictor → Symptom‑based detection for accessibility without lab tests.
+➡️ Solution: Developed a two‑level predictor (Advanced + Basic) with chatbot integration.
 
-Models Compared
-Implemented and evaluated multiple ML algorithms:
+🔹 Advanced Diabetes Predictor
+➡️ Uses clinical features for accurate detection.
 
-Logistic Regression
+➡️ Features: Age, Pregnancies, Blood Pressure, Glucose, Insulin, Skin Thickness, Diabetes Pedigree Function, BMI.
 
-Support Vector Machine (SVM)
+➡️ Limitation: Reliable only with proper lab test values.
 
-Random Forest
+🔹 Basic Diabetes Predictor
+➡️ Uses symptom‑based inputs for accessibility without lab tests.
 
-Decision Tree
+➡️ Features: Age, Gender, Polyuria, Polydipsia, Weight Loss, Weakness, Polyphagia, Genital Thrush, Visual Blurring, Itching, Irritability, Delayed Healing, Partial Paresis, Muscle Stiffness, Alopecia.
 
-XGBoost
+➡️ Solves accessibility gap for middle‑class users.
 
-Gradient Boosting
+🔹 Integrated Chatbot
+➡️ Built with Streamlit for interactivity.
 
-Accuracy of each model was compared, and the best performing model was selected for deployment.
+➡️ Provides:
 
-Data Processing
-Data Cleaning → handled missing values, normalized features.
+→ Diet recommendations
 
-Data Splitting → train/test split for evaluation.
+→ Sleep schedule guidance
 
-Model Training → trained multiple models and selected the one with highest accuracy.
+→ Lifestyle tips
 
-Model Storage → saved using Pickle‑Mixin for deployment.
+→ General health FAQs
 
-Features Used
-Advanced Model: Age, Pregnancies, Blood Pressure, Glucose, Insulin, Skin Thickness, Diabetes Pedigree Function, BMI.
+🔹 Data Processing Workflow
+➡️ Data Cleaning → handled missing values, normalized features.
 
-Basic Model: Age, Gender, Polyuria, Polydipsia, Weight Loss, Weakness, Polyphagia, Genital Thrush, Visual Blurring, Itching, Irritability, Delayed Healing, Partial Paresis, Muscle Stiffness, Alopecia.
+➡️ Data Splitting → train/test split for evaluation.
 
-Integrated Chatbot
-Streamlit‑based chatbot provides:
+➡️ Model Training → trained multiple ML models.
 
-Diet recommendations
+➡️ Model Comparison → checked accuracy and selected best performing model.
 
-Sleep schedule guidance
+🔹 Models Compared
+➡️ Logistic Regression
 
-Lifestyle tips
+➡️ Support Vector Machine (SVM)
 
-General health FAQs
+➡️ Random Forest
 
-Tech Stack
-Languages/Frameworks: Python, Streamlit
+➡️ Decision Tree
 
-Libraries: Scikit‑Learn, XGBoost, LightGBM, CatBoost, Pandas, NumPy, Matplotlib, Seaborn
+➡️ XGBoost
 
-Deployment: Streamlit with custom UI
+➡️ Gradient Boosting
 
-Impact
-Makes diabetes prediction accessible for users without lab tests.
+🔹 Tech Stack
+➡️ Languages/Frameworks: Python, Streamlit
 
-Provides interactive chatbot for lifestyle guidance.
+➡️ Libraries: Scikit‑Learn, XGBoost, LightGBM, CatBoost, Pandas, NumPy, Matplotlib, Seaborn
 
-Demonstrates comparison of multiple ML models with accuracy evaluation.
+➡️ Model Storage: Pickle‑Mixin
+
+➡️ Deployment: Streamlit with custom UI
+
+🔹 Impact
+➡️ Accessible diabetes prediction for users without lab tests.
+
+➡️ Accurate detection for medical professionals with clinical data.
+
+➡️ Interactive chatbot improves user experience.
