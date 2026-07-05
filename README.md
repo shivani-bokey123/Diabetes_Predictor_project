@@ -60,4 +60,36 @@ Forest, Decision Tree, XGBoost, and Gradient Boosting. Each model was trained an
 
 -Accurate detection for medical professionals with clinical data.
 
--Interactive chatbot improves user experience.
+-Interactive chatbot improves user experience
+
+## Application Screenshots
+
+### Basic Model
+
+#### Input Interface
+
+![Basic Model Input](SUI1.jpeg)
+
+![Basic Model Input](SUI2.jpeg)
+
+![Basic Model Input](SUI3.jpeg)
+
+#### Output Result
+
+![Basic Model Output](SUIout.jpeg)
+
+### Advanced Model
+
+#### Input Interface
+
+![Advanced Model Input](UI.jpeg)
+
+#### Output Result
+
+![Advanced Model Output](UIout.jpeg)
+
+### Chatbot Integration
+
+#### Chatbot Interface
+
+![Chatbot Screenshot](chatbotUI3.jpeg)
